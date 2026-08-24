@@ -1,10 +1,10 @@
-# go-rest
+# GO REST
 
 A lightweight Go application framework providing reusable infrastructure for building REST APIs and backend services.
 
 ## ⚙️ Installation
 
-**go-rest requires Go 1.25 or higher.**
+**GO REST requires Go 1.25 or higher.**
 
 If you need to install or upgrade Go, visit the [official Go download page](https://go.dev/dl/).
 
@@ -35,7 +35,7 @@ The easiest way to get started is to use the `golang-rest-api-starter` repositor
 git clone github.com/elmansyah/golang-rest-api-starter
 ```
 
-The starter provides a working example of an application built with `go-rest`, including:
+The starter provides a working example of an application built with `GO REST`, including:
 
 * Configuration
 * Database connection
@@ -56,7 +56,7 @@ Developers are free to modify the application layer according to their own requi
 
 ## 📁 Project Structure
 
-A typical application built with `go-rest` can be organized as follows:
+A typical application built with `GO REST` can be organized as follows:
 
 ```text
 .
@@ -168,7 +168,6 @@ Responsible for request-level filtering such as:
 * Authentication
 * Authorization
 * JWT
-* OAuth
 * Other application-specific middleware
 
 ### View
@@ -183,7 +182,7 @@ Contains reusable application-level helper functions.
 
 ## 🛢️ Database Support
 
-`go-rest` provides infrastructure for multiple database drivers.
+`GO REST` provides infrastructure for multiple database drivers.
 
 Currently supported database types include:
 
@@ -234,13 +233,13 @@ type User struct {
 SQL-based databases can use SQL queries:
 
 ```go
-rows, err := db.QuerySQL(ctx, query)
+rows, err := model.database.Query(ctx, query)
 ```
 
 MongoDB can use MongoDB-native operations:
 
 ```go
-collection := mongoConn.Collection("users")
+collection, _, err := model.Database.Collection("users")
 
 cursor, err := collection.Find(ctx, bson.M{})
 ```
@@ -253,7 +252,7 @@ Use the query model that is appropriate for the selected database.
 
 ## 🗃️ Database Migration
 
-`go-rest` provides database migration infrastructure.
+`GO REST` provides database migration infrastructure.
 
 Migrations are executed during application startup according to the configured database driver.
 
@@ -340,7 +339,7 @@ Developers are free to:
 * Implement business logic
 * Implement database-specific queries
 
-The core infrastructure is provided by `go-rest`.
+The core infrastructure is provided by `GO REST`.
 
 ```text
 go-rest
@@ -367,7 +366,7 @@ The application layer should be adapted to the requirements of each project.
 
 ## 🧠 Design Philosophy
 
-`go-rest` aims to provide a simple and predictable foundation for Go applications.
+`GO REST` aims to provide a simple and predictable foundation for Go applications.
 
 The framework handles common infrastructure concerns while leaving application-specific decisions to the developer.
 
@@ -454,7 +453,7 @@ For a complete working example, see:
 github.com/elmansyah/golang-rest-api-starter
 ```
 
-The starter demonstrates how to build an application using `go-rest`, including:
+The starter demonstrates how to build an application using `GO REST`, including:
 
 ```text
 Handler

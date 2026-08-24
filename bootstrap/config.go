@@ -34,7 +34,7 @@ func InitConfig(provider *config.ConfigProvider) config.Config {
 		Modules: provider.ModulesProvider(),
 
 		// Load enable MongoDB migrations
-		MongoDBMigrations: provider.DBMigrations(),
+		MongoDBMigrations: provider.MongoDBMigrationProvider(),
 	}
 
 	return config.GlobalConfig

@@ -6,15 +6,15 @@ package config
 var GlobalConfig Config
 
 type ConfigProvider struct {
-	AppProvider      func() *App
-	DatabaseProvider func() *Database
-	RouterProvider   func() *Router
-	CookiesProvider  func() *Cookies
-	ServerProvider   func() *Server
-	TokenProvider    func() *Token
-	FilterProvider   func() *Filter
-	ModulesProvider  func() []ModuleRegistrar
-	DBMigrations     func() []MongoDBMigrationRegistrar
+	AppProvider              func() *App
+	DatabaseProvider         func() *Database
+	RouterProvider           func() *Router
+	CookiesProvider          func() *Cookies
+	ServerProvider           func() *Server
+	TokenProvider            func() *Token
+	FilterProvider           func() *Filter
+	ModulesProvider          func() []ModuleRegistrar
+	MongoDBMigrationProvider func() []MongoDBMigrationRegistrar
 }
 
 // ======================================================================================
