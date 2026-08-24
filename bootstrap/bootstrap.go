@@ -90,6 +90,13 @@ func AppRun() error {
 	}
 
 	// =====================================(7)==================================
+	// ===============================LOAD DB SEEDER=============================
+	// Execute database migrations
+	if err := database.DatabaseSeeder(context.Background()); err != nil {
+		return fmt.Errorf("db seeder failed, %w", err)
+	}
+
+	// =====================================(8)==================================
 	// =================================INIT ROUTER==============================
 	// Initialize and load all HTTP routes for the application.
 	// This step registers all route handlers from the modules defined in GlobalConfig.
@@ -108,7 +115,7 @@ func AppRun() error {
 		return fmt.Errorf("initialize HTTP router failed, %w", err)
 	}
 
-	// =====================================(8)==================================
+	// =====================================(9)==================================
 	// ================================START SERVER==============================
 	// Start the HTTP server on the configured port.
 	// This is the FINAL step before the application becomes fully operational

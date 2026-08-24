@@ -44,6 +44,9 @@ type Database struct {
 
 	// Migration determines whether automated database migrations should run on startup
 	Migration bool
+
+	// Seeder determines whether automated database seeder should run on startup
+	Seeder bool
 }
 
 // ======================================================================================

@@ -15,6 +15,7 @@ type ConfigProvider struct {
 	FilterProvider           func() *Filter
 	ModulesProvider          func() []ModuleRegistrar
 	MongoDBMigrationProvider func() []MongoDBMigrationRegistrar
+	MongoDBSeederProvider    func() []MongoDBSeederRegistrar
 }
 
 // ======================================================================================
@@ -47,4 +48,7 @@ type Config struct {
 
 	// MongoDBMigrations list of registered MongoDB migrations registrar
 	MongoDBMigrations []MongoDBMigrationRegistrar
+
+	// MongoDBSeeders list of registered MongoDB migrations registrar
+	MongoDBSeeders []MongoDBSeederRegistrar
 }

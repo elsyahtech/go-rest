@@ -35,6 +35,9 @@ func InitConfig(provider *config.ConfigProvider) config.Config {
 
 		// Load enable MongoDB migrations
 		MongoDBMigrations: provider.MongoDBMigrationProvider(),
+
+		// Load enable MongoDB seeder
+		MongoDBSeeders: provider.MongoDBSeederProvider(),
 	}
 
 	return config.GlobalConfig

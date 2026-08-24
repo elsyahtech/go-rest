@@ -19,6 +19,7 @@ const (
 	LogFieldKeyDriver        = "driver"
 	LogFieldKeyAdapter       = "adapter"
 	LogFieldKeyMigrationName = "migration_name"
+	LogFieldKeySeederName    = "seeder_name"
 	LogFieldKeyMigrationDir  = "migration_directory"
 	LogFieldKeyFile          = "file"
 	LogFieldKeyStep          = "step"
