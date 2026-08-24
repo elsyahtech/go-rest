@@ -59,30 +59,29 @@ func printStartupBanner(_ *fiber.App, routes ...config.ModuleRegistrar) {
 	}
 
 	fmt.Println()
-	fmt.Println("╔════════════════════════════════════════════════════════════════╗")
-	fmt.Println("║ 		             GO REST                             ║")
-	fmt.Println("║ 		             v1.0.0                              ║")
-	fmt.Println("╠════════════════════════════════════════════════════════════════╣")
-	fmt.Printf("║  App Name ...................... %-28s  ║\n", strings.ToUpper(cfg.App.AppName))
-	fmt.Printf("║  App Version Running ........... %-28s  ║\n", cfg.App.Version)
-	fmt.Printf("║  Host Runnig ................... %-28s  ║\n", address)
-	fmt.Printf("║  Database Running .............. %-28s  ║\n", strings.ToUpper(cfg.Database.Driver))
-	fmt.Printf("║  Authentication ................ %-28s  ║\n", authType)
-	fmt.Printf("║  Modules Running ............... %-28d  ║\n", len(routes))
+	fmt.Println("╔═════════════════════════════════════════════════════════════════════════════╗")
+	fmt.Println("║  GO REST                                                                    ║")
+	fmt.Println("║  v0.1.2                                                                     ║")
+	fmt.Println("╠═════════════════════════════════════════════════════════════════════════════╣")
+	fmt.Printf("║  App Name ...................... %-28s               ║\n", strings.ToUpper(cfg.App.AppName))
+	fmt.Printf("║  App Version Running ........... %-28s               ║\n", cfg.App.Version)
+	fmt.Printf("║  Host Runnig ................... %-28s               ║\n", address)
+	fmt.Printf("║  Database Running .............. %-28s               ║\n", strings.ToUpper(cfg.Database.Driver))
+	fmt.Printf("║  Authentication ................ %-28s               ║\n", authType)
+	fmt.Printf("║  Modules Running ............... %-28d               ║\n", len(routes))
 
 	for _, register := range routes {
 		rawName := moduleName(register)
-
 		nameParts := strings.Split(rawName, ".")
 		functionName := nameParts[len(nameParts)-1]
 		cleanName := strings.TrimPrefix(functionName, "Register")
 
 		cleanName = strings.TrimSuffix(cleanName, "Routes")
 
-		fmt.Printf("║   - %-58s ║\n", cleanName)
+		fmt.Printf("║   - %-58s              ║\n", cleanName)
 	}
 
-	fmt.Println("╚════════════════════════════════════════════════════════════════╝")
+	fmt.Println("╚═════════════════════════════════════════════════════════════════════════════╝")
 	fmt.Println()
 }
 
