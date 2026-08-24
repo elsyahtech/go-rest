@@ -1,0 +1,27 @@
+package database
+
+const (
+	MYSQL                    = "mysql"
+	MARIADB                  = "mariadb"
+	POSTGRESQL               = "postgresql"
+	POSTGRES                 = "postgres"
+	PSQL                     = "psql"
+	PG                       = "pg"
+	MSSQL                    = "mssql"
+	SQLSERVER                = "sqlserver"
+	SQLSRV                   = "sql-server"
+	SQLITE                   = "sqlite"
+	SQLITE3                  = "sqlite3"
+	MONGODB                  = "mongodb"
+	MONGO                    = "mongo"
+	LogFieldKeyError         = "error"
+	LogFieldKeyTroubleshoot  = "troubleshoot"
+	LogFieldKeyDriver        = "driver"
+	LogFieldKeyAdapter       = "adapter"
+	LogFieldKeyMigrationName = "migration_name"
+	LogFieldKeyMigrationDir  = "migration_directory"
+	LogFieldKeyFile          = "file"
+	LogFieldKeyStep          = "step"
+	LogFieldKeyTotal         = "total"
+	LogFieldKeyCount         = "count"
+)
