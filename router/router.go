@@ -61,7 +61,7 @@ func printStartupBanner(_ *fiber.App, routes ...config.ModuleRegistrar) {
 	fmt.Println()
 	fmt.Println("╔═════════════════════════════════════════════════════════════════════════════╗")
 	fmt.Println("║  GO REST                                                                    ║")
-	fmt.Println("║  v0.1.2                                                                     ║")
+	fmt.Println("║  v0.1.3                                                                     ║")
 	fmt.Println("╠═════════════════════════════════════════════════════════════════════════════╣")
 	fmt.Printf("║  App Name ...................... %-28s               ║\n", strings.ToUpper(cfg.App.AppName))
 	fmt.Printf("║  App Version Running ........... %-28s               ║\n", cfg.App.Version)
